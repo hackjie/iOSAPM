@@ -1,0 +1,6 @@
+framework module Pods_iOSAPM {
+  umbrella header "Pods-iOSAPM-umbrella.h"
+
+  export *
+  module * { export * }
+}

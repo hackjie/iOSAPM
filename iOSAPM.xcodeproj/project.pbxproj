@@ -13,9 +13,12 @@
 		B644D0D9212E9275009F5A6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B644D0D8212E9275009F5A6D /* Assets.xcassets */; };
 		B644D0DC212E9275009F5A6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B644D0DA212E9275009F5A6D /* LaunchScreen.storyboard */; };
 		B644D0E4212E96E1009F5A6D /* CustomURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644D0E3212E96E1009F5A6D /* CustomURLProtocol.swift */; };
+		E8FBBF037A410EB99FB61C02 /* Pods_iOSAPM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F135EA576ED94588BA0A32C /* Pods_iOSAPM.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F135EA576ED94588BA0A32C /* Pods_iOSAPM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSAPM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AFD1EEC99BB84A72E3E2393 /* Pods-iOSAPM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSAPM.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSAPM/Pods-iOSAPM.release.xcconfig"; sourceTree = "<group>"; };
 		B644D0CE212E9272009F5A6D /* iOSAPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSAPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B644D0D1212E9272009F5A6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B644D0D3212E9272009F5A6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		B644D0DB212E9275009F5A6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B644D0DD212E9275009F5A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B644D0E3212E96E1009F5A6D /* CustomURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomURLProtocol.swift; sourceTree = "<group>"; };
+		D242ED01FF0225A9384AE99D /* Pods-iOSAPM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSAPM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSAPM/Pods-iOSAPM.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8FBBF037A410EB99FB61C02 /* Pods_iOSAPM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		67DB48A12428880ADEA57D35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F135EA576ED94588BA0A32C /* Pods_iOSAPM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6A5BBB06E9A1D11E32F17678 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D242ED01FF0225A9384AE99D /* Pods-iOSAPM.debug.xcconfig */,
+				7AFD1EEC99BB84A72E3E2393 /* Pods-iOSAPM.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B644D0C5212E9272009F5A6D = {
 			isa = PBXGroup;
 			children = (
 				B644D0D0212E9272009F5A6D /* iOSAPM */,
 				B644D0CF212E9272009F5A6D /* Products */,
+				6A5BBB06E9A1D11E32F17678 /* Pods */,
+				67DB48A12428880ADEA57D35 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B644D0E0212E9275009F5A6D /* Build configuration list for PBXNativeTarget "iOSAPM" */;
 			buildPhases = (
+				6951F72ED6BAE6A90F093D22 /* [CP] Check Pods Manifest.lock */,
 				B644D0CA212E9272009F5A6D /* Sources */,
 				B644D0CB212E9272009F5A6D /* Frameworks */,
 				B644D0CC212E9272009F5A6D /* Resources */,
+				8DD9D8C66B39CCBF36377C59 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6951F72ED6BAE6A90F093D22 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOSAPM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DD9D8C66B39CCBF36377C59 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-iOSAPM/Pods-iOSAPM-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSAPM/Pods-iOSAPM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B644D0CA212E9272009F5A6D /* Sources */ = {
@@ -282,14 +347,12 @@
 		};
 		B644D0E1212E9275009F5A6D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D242ED01FF0225A9384AE99D /* Pods-iOSAPM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iOSAPM/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leoli.iOSAPM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -299,14 +362,12 @@
 		};
 		B644D0E2212E9275009F5A6D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AFD1EEC99BB84A72E3E2393 /* Pods-iOSAPM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iOSAPM/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leoli.iOSAPM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
